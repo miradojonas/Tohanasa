@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 # ✅ Clé API Gemini (à remplacer si besoin)
-GEMINI_API_KEY = "REDACTED_GOOGLE_API_KEY"
+GEMINI_API_KEY = ""
 
 # Configuration de l'API Gemini
 genai.configure(api_key=GEMINI_API_KEY)
