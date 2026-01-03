@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyc
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Django
+*.sqlite3
+media/
+staticfiles/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+venv/
+.venv/
+
+# Node / React
+node_modules/
+build/
+dist/
+coverage/
+
+# Local artifacts
+CV produit.pdf
+
+# OS
+.DS_Store

@@ -1,15 +1,17 @@
 import google.generativeai as genai
+import os
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-# ✅ Clé API Gemini (à remplacer si besoin)
-GEMINI_API_KEY = ""
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 
-# Configuration de l'API Gemini
-genai.configure(api_key=GEMINI_API_KEY)
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
 
 # Fonction qui envoie un message à Gemini
 def ask_gemini(message):
+    if not GEMINI_API_KEY:
+        return "Clé API Gemini manquante côté serveur. Configure GEMINI_API_KEY."
     try:
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         response = model.generate_content(message)
