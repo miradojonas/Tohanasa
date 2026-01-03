@@ -1,0 +1,28 @@
+<!-- tohanasa/cv/templates/cv_template.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV de {{ cv.name }}</title>
+    <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>{{ cv.name }}</h1>
+            <div class="contact-info">
+                <p>Email : {{ cv.email }} | Téléphone : {{ cv.phone }}</p>
+            </div>
+        </div>
+
+        <h2>Expérience</h2>
+        <p>{{ cv.experience }}</p>
+
+        <h2>Éducation</h2>
+        <p>{{ cv.education }}</p>
+
+        <h2>Compétences</h2>
+        <p>{{ cv.skills }}</p>
+    </div>
+</body>
+</html>

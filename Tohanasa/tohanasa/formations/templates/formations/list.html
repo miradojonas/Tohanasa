@@ -1,0 +1,21 @@
+<h1>Liste des Formations</h1>
+<table>
+    <tr>
+        <th>Titre</th>
+        <th>Institution</th>
+        <th>Date de Début</th>
+        <th>Date de Fin</th>
+        <th>Actions</th>
+    </tr>
+    {% for formation in formations %}
+    <tr>
+        <td>{{ formation.title }}</td>
+        <td>{{ formation.institution }}</td>
+        <td>{{ formation.start_date }}</td>
+        <td>{{ formation.end_date }}</td>
+        <td>
+            <a href="{% url 'formation-detail' formation.id %}">Détails</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

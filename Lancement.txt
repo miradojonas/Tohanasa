@@ -1,0 +1,14 @@
+Le projet TOHANASA a été conçu dans le but de répondre à des besoins concrets liés à l’emploi, la formation et la communication entre les utilisateurs. Grâce à une interface intuitive et des fonctionnalités bien ciblées, la plateforme offre un environnement propice à la recherche d’opportunités professionnelles, à l’acquisition de compétences et à la mise en valeur des profils via les mini CV.
+
+Créer 2 terminales, l'un pour le backend et l'autre pour le frontend
+
+Terminale 1:
+venv\Scripts\activate
+cd tohanasa
+python manage.py runserver 8081
+
+Terminale 2 :
+venv\Scripts\activate
+cd tohanasa
+cd frontend
+npm start  

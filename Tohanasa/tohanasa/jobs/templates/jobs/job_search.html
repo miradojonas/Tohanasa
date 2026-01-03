@@ -1,0 +1,25 @@
+   <!-- /tohanasa/jobs/templates/jobs/job_search.html -->
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Recherche d'Emplois</title>
+   </head>
+   <body>
+       <h1>Recherche d'Emplois</h1>
+       <form method="GET">
+           <input type="text" name="keyword" placeholder="Mots-clés" />
+           <input type="text" name="location" placeholder="Localisation" />
+           <button type="submit">Rechercher</button>
+       </form>
+       <ul>
+           {% for job in jobs %}
+               <li>{{ job.title }} - {{ job.company }} - {{ job.location }}</li>
+           {% empty %}
+               <li>Aucune offre d'emploi trouvée.</li>
+           {% endfor %}
+       </ul>
+   </body>
+   </html>
+   
